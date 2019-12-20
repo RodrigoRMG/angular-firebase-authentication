@@ -1,0 +1,55 @@
+
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">Log In</h3>
+                            <p class="text-muted mb-4">Lo in to your account</p>
+              
+                                <div class="form-group mb-3">
+                                    <input id="inputEmail" type="email" placeholder="Email address"  #userName required autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input id="inputPassword" type="password" placeholder="Password" #userPassword required class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                </div>
+                               
+                                <a type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" (click)="authService.SignIn(userName.value, userPassword.value)">Sign in</a>
+                   
+                                <div class="formGroup">
+                                  <span class="or"><span class="orInner">Or</span></span>
+                                </div>
+                          
+                                <!-- Calling GoogleAuth Api from AuthService -->
+                                <div class="formGroup">
+
+                                  <a (click)="authService.GoogleAuth()" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm google-button"> <i class="fa fa-google"></i></a>
+                                </div>
+                          
+                                <div class="forgotPassword">
+                                  <a href="#"  routerLink="/forgot-password"><span>Forgot Password?</span></a>
+                                </div>
+                          
+                              <div class="redirectToLogin">
+                               <a hre="#"  routerLink="/register-user"><span>Don't have an account?<span class="redirect"> Sign Up</span></span></a> 
+                              </div>
+                            
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
